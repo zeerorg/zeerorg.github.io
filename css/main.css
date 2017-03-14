@@ -1,0 +1,19 @@
+.keyboard {
+    background: #cccccc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.keyboard > p {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.keyboard > p > span {
+    padding: 7px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    min-width: 20px;
+}
+.cursor {
+    visibility: hidden;
+}
