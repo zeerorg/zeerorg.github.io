@@ -1,5 +1,6 @@
-var name = "rishabh gupta";
+var name = "developer";
 var current_text = $(".myname").text();
+var updateInterval;
 
 function presskey(ch) {
     $(".key-"+ch).css("background-color", "#000000");
@@ -7,7 +8,7 @@ function presskey(ch) {
     setTimeout(function(){
         $(".key-"+ch).css("background-color", "#ffffff");
         $(".key-"+ch).css("color", "#000000");
-    }, 200);
+    }, 50);
 }
 
 function updatename() {
@@ -16,6 +17,9 @@ function updatename() {
         var character = name[current_text.length];
         presskey(character);
         current_text += character;
+    } else {
+        clearInterval(updateInterval)
+        console.log("Cleared")
     }
     $(".myname").text(current_text);
 }
@@ -29,8 +33,14 @@ function cursor() {
 }
 
 function main() {
-    setInterval(updatename, 500);
-    setInterval(cursor, 300)
-    console.log("Hello");
+    updateInterval = setInterval(updatename, 200);
+    setInterval(cursor, 100);
+    $(document).one('scroll', function(event) {
+        console.log("triggered");
+        var slideTime = $(document).scrollTop();
+        console.log(slideTime)
+        $('.keyboard').slideUp(100);
+        //$('.su').slideUp();
+    });
 }
 $(document).ready(main);

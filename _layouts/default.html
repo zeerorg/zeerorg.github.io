@@ -7,6 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -14,7 +15,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body><!--
+  <body style="font-family: 'Roboto', sans-serif; height: 100%;"><!--
       <nav>
         Home
       </nav>
@@ -43,6 +44,10 @@
       </header>
 </div>
 -->
+      <div class="topnav">
+          <a href="#">Resume</a>
+          <a href="#" style="position: absolute; right: 0px">Say Hello</a>
+      </div>
       <section>
         {{ content }}
       </section>
