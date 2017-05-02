@@ -42,5 +42,18 @@ function main() {
         $('.keyboard').slideUp(100);
         //$('.su').slideUp();
     });
+    // $(document).on('scroll', function(event) {
+    //     $(".rounded-image").css("visibility", "");
+    //     $(".rounded-image").css("animation-name", "circle");
+    //     $(".rounded-image").css("animation-duration", "0.35s");
+    //     setTimeout(function(){
+    //         $(".rounded-image").css("visibility", "hidden");
+    //         $(".rounded-image").css("animation-name", "");
+    //         $(".rounded-image").css("animation-duration", "");
+    //     }, 350);
+    // });
 }
 $(document).ready(main);
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});

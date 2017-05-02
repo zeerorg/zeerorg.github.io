@@ -3,65 +3,30 @@ html, body, section {
     height: 100%;
 }
 body {
-    padding: 0px;
-    margin: 0px;
+    padding: 0%;
+    margin-top: 5vw;
 }
 /* For keyboard typing style */
-.keyboard {
-    background: #cccccc;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.keyboard > p {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-}
-.keyboard > p > span {
-    padding: 7px;
-    border-radius: 2px;
-    background-color: #ffffff;
-    min-width: 20px;
-}
-.cursor {
+/*.cursor {
     visibility: hidden;
-}
+}*/
 /* END */
-
-/* navigation bar 
 .topnav {
-    width: 100%;
-    height: 30px;
-    background-color: aliceblue;    
-}
-
-.topnav > a {
-    color: black;
-    text-decoration: none;
-    background-color: white;
-    /* center align 
-    margin: 0;
-    height: 100%;
-} */
-.topnav {
-    background-color: #f2f2f2;
+    background-color: #7b0ea2;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5vw;
+    z-index: 1;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    display: block;
-    color: #333;
+.topnav-heading {
+    color: white;
     text-align: center;
-    padding: 10px 10px 10px 10px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    color: #f2f2f2;
-    background-color: #333;
+    font-size: 3.5vw;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -76,6 +41,155 @@ body {
     margin-bottom: 0;
 }
 
+.main-jumbo {
+    background-color: #f3e5f5;
+    height: 40vw;
+    border-bottom: 20vw solid white;
+    margin-right: 0px; /*to prevent scrolling horizontally */
+    /*padding-bottom: 20vw;*/
+}
 
+.main-jumbo-text {
+    font-size: 9vw;
+    font-weight: 100;
+    margin-top: 3vw;
+    margin-right: 3vw;
+    text-align: right;
+    vertical-align: middle;
+}
 
+@keyframes circle {
+    from {width: 23vw; height: 23vw;}
+    to {width: 0px; height: 0px;}
+}
 
+.rounded-image {
+    border-radius: 50%;
+    width: 23vw;
+    height: 23vw;
+    /*vertical-align: middle;*/
+    margin-top: 8vw;
+    margin-left: 5vw;
+    box-shadow: 10px;
+    opacity: 0.8;
+    background-color: #000000;
+    border: 4px solid #000000;
+    /*animation-name: circle;*/
+    /*animation-duration: 0.5s;*/
+}
+
+.nav-elements {
+    margin-left: 12vw;
+    margin-top: 6.5vw;
+}
+.nav-elements > span {
+    margin: 2.8vw;
+    font-size: 2vw;
+}
+
+.nav-elements span:hover {
+    color: #666666;
+}
+
+/*For small tablets*/
+@media (min-width: 575px) and (max-width: 768px) {
+
+    .nav-elements {
+        margin-left: 11vw;
+    }
+
+    .nav-elements > span {
+        font-size: 2.5vw;
+        margin: 2vw;
+    }
+ }
+ /* for tablets */
+@media (min-width: 768px) and (max-width: 1025px) {
+    .main-jumbo {
+        height: 50vw;
+        border-bottom: 25vw solid white;
+    }
+
+    .rounded-image {
+        margin-top: 12.5vw;
+    }
+
+    .main-jumbo-text {
+        font-size: 10vw;
+        margin-top: 6vw;
+    }
+
+    .nav-elements > span {
+        font-size: 2.5vw;
+        margin: 1.8vw;
+    }
+ }
+
+@media (max-width: 574px) {
+
+    .topnav {
+        height: 11vw;
+    }
+    
+    .topnav-heading {
+        font-size: 7vw;
+        margin: 0.2vw;
+    }
+
+    body {
+        margin-top: 10vw;
+    }
+
+    .main-jumbo {
+        position: relative;
+        height: 60vw;
+    }
+
+    .main-jumbo-text {
+        position: absolute;
+        font-size: 15vw;
+        margin-top: -17vw;
+        top: 0px;
+        right: 0px;
+    }
+
+    .rounded-image {
+        position: absolute;
+        top: 18vw;
+        right: 35vw;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .round-image-parent {
+        height: 1px;
+    }
+
+    .nav-elements {
+        position: absolute;
+        top: 40vw;
+        margin: 0px;
+        margin-top: 4vw;
+    }
+
+    .nav-elements > span {
+        margin: 1.7vw;
+        font-size: 4.9vw;
+    }
+
+    .remove-from-mobiles {
+        display: none;
+    }
+}
+
+/*Very small mobiles*/
+@media (max-width: 321px) {
+    .nav-elements > span {
+        margin: 1.7vw;
+    }
+}
+
+/* some useful properties */
+.set-middle {
+    vertical-align: middle;
+}
