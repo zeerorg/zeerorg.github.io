@@ -1,6 +1,7 @@
 var name = "developer";
 var current_text = $(".myname").text();
 var updateInterval;
+var slider = 1;
 
 function presskey(ch) {
     $(".key-"+ch).css("background-color", "#000000");
@@ -32,6 +33,15 @@ function cursor() {
         $(".cursor").css("visibility", "hidden");
 }
 
+function setSlide(num) {
+    console.log("setting block " + num)
+    for (var i=1; i<=4; i++) {
+        $(".container-"+i).css('display', 'none');
+        $(".nav-"+i).removeClass("underline");
+    }
+    $(".container-"+num).css('display', 'block');
+}
+
 function main() {
     updateInterval = setInterval(updatename, 200);
     setInterval(cursor, 100);
@@ -42,18 +52,11 @@ function main() {
         $('.keyboard').slideUp(100);
         //$('.su').slideUp();
     });
-    // $(document).on('scroll', function(event) {
-    //     $(".rounded-image").css("visibility", "");
-    //     $(".rounded-image").css("animation-name", "circle");
-    //     $(".rounded-image").css("animation-duration", "0.35s");
-    //     setTimeout(function(){
-    //         $(".rounded-image").css("visibility", "hidden");
-    //         $(".rounded-image").css("animation-name", "");
-    //         $(".rounded-image").css("animation-duration", "");
-    //     }, 350);
-    // });
+
+    $(".nav-1").on("click", function() {setSlide(1)} )
+    $(".nav-2").on("click", function() {setSlide(2)} )
+    $(".nav-3").on("click", function() {setSlide(3)} )
+    $(".nav-4").on("click", function() {setSlide(4)} )
+    setSlide(1)
 }
 $(document).ready(main);
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-});
