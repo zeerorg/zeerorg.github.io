@@ -35,11 +35,20 @@ function cursor() {
 
 function setSlide(num) {
     console.log("setting block " + num)
+<<<<<<< HEAD
     for (var i=1; i<=4; i++) {
         $(".container-"+i).css('display', 'none');
         $(".nav-"+i).removeClass("underline");
     }
     $(".container-"+num).css('display', 'block');
+=======
+    $(".container-"+slider).css('display', 'none');
+    $(".nav-"+slider).children(".line").css('transform', 'scaleX(0)');
+
+    $(".nav-"+num).children(".line").css('transform', 'scaleX(1)');
+    $(".container-"+num).css('display', 'block');
+    slider = num;
+>>>>>>> e8042bd17bcc61997198c039690cebccde340791
 }
 
 function main() {

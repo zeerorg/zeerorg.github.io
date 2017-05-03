@@ -87,17 +87,27 @@ body {
     font-size: 2vw;
     border-bottom: 0px;
     position: relative;
+<<<<<<< HEAD
    -webkit-transition: all 0.5s ease;                  
    -moz-transition: all 0.5s ease;                 
    -o-transition: all 0.5s ease;   
    -ms-transition: all 0.5s ease;          
    transition: all 0.5s ease;
+=======
+   /*-webkit-transition: all 0.5s ease;                  
+   -moz-transition: all 0.5s ease;                 
+   -o-transition: all 0.5s ease;   
+   -ms-transition: all 0.5s ease;          
+   transition: all 0.5s ease;*/
+>>>>>>> e8042bd17bcc61997198c039690cebccde340791
 }
 
 .nav-elements > span:hover {
     color: #666666;
+    cursor: pointer;
 }
 
+<<<<<<< HEAD
 .nav-elements > span:after {
     content: '';
     position: absolute;
@@ -122,6 +132,34 @@ body {
 
 .slider > div {
     display: none;
+=======
+.slider > div {
+    display: none;
+}
+
+.line {
+    display: inline;
+    position: absolute;
+    left: 0px;
+    margin-left: -0.3vw;
+    height: 3.5vw;
+    width: 100%;
+    border-bottom: 3px solid black;
+    -webkit-transform: scaleX(0.5);
+    -ms-transform: scaleX(0.5);
+    -moz-transform: scaleX(0.5);
+    -o-transform: scaleX(0.5);
+    transform: scaleX(0);
+
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.nav-4 .line {
+    margin-left: 0px;
+>>>>>>> e8042bd17bcc61997198c039690cebccde340791
 }
  /* for tablets */
 @media (min-width: 575px) and (max-width: 1025px) {
@@ -150,6 +188,17 @@ body {
         font-size: 3vw;
         margin: 1.8vw;
     }
+<<<<<<< HEAD
+=======
+
+    .nav-4 > .line {
+        height: 0.6vw;
+    }
+
+    .line {
+        height: 5vw;
+    }
+>>>>>>> e8042bd17bcc61997198c039690cebccde340791
  }
 /* mobiles */
 @media (max-width: 574px) {
@@ -206,6 +255,18 @@ body {
 
     .remove-from-mobiles {
         display: none;
+    }
+
+    .nav-4 > .line {
+        height: 0.6vw;
+    }
+
+    .line {
+        height: 8vw;
+    }
+
+    .slider {
+        margin-top: 25vw;
     }
 }
 
