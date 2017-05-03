@@ -87,41 +87,44 @@ body {
     font-size: 2vw;
     border-bottom: 0px;
     position: relative;
-   -webkit-transition: all 0.5s ease;                  
+   /*-webkit-transition: all 0.5s ease;                  
    -moz-transition: all 0.5s ease;                 
    -o-transition: all 0.5s ease;   
    -ms-transition: all 0.5s ease;          
-   transition: all 0.5s ease;
+   transition: all 0.5s ease;*/
 }
 
 .nav-elements > span:hover {
     color: #666666;
-}
-
-.nav-elements > span:after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    left: 0;
-    height: 0px;
-    border-bottom: 2px solid;
-    bottom: 2px;
-    -webkit-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: -webkit-transform 0.2s ease-in;
-    transition: transform 0.2s ease-in;
-}
-
-.nav-elements span:hover:after {
-    -webkit-transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    transform: scaleX(1);
+    cursor: pointer;
 }
 
 .slider > div {
     display: none;
+}
+
+.line {
+    display: inline;
+    position: absolute;
+    left: 0px;
+    margin-left: -0.3vw;
+    height: 3.5vw;
+    width: 100%;
+    border-bottom: 3px solid black;
+    -webkit-transform: scaleX(0.5);
+    -ms-transform: scaleX(0.5);
+    -moz-transform: scaleX(0.5);
+    -o-transform: scaleX(0.5);
+    transform: scaleX(0);
+
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.nav-4 .line {
+    margin-left: 0px;
 }
  /* for tablets */
 @media (min-width: 575px) and (max-width: 1025px) {
@@ -149,6 +152,14 @@ body {
     .nav-elements > span {
         font-size: 3vw;
         margin: 1.8vw;
+    }
+
+    .nav-4 > .line {
+        height: 0.6vw;
+    }
+
+    .line {
+        height: 5vw;
     }
  }
 /* mobiles */
@@ -206,6 +217,18 @@ body {
 
     .remove-from-mobiles {
         display: none;
+    }
+
+    .nav-4 > .line {
+        height: 0.6vw;
+    }
+
+    .line {
+        height: 8vw;
+    }
+
+    .slider {
+        margin-top: 25vw;
     }
 }
 
