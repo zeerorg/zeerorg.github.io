@@ -79,11 +79,11 @@ body {
 }
 
 .nav-elements {
-    margin-left: 12vw;
+    margin-left: 11vw;
     margin-top: 6.5vw;
 }
 .nav-elements > span {
-    margin: 2.8vw;
+    margin: 2.3vw;
     font-size: 2vw;
     border-bottom: 0px;
     position: relative;
@@ -145,7 +145,7 @@ body {
 
     .nav-elements > span {
         font-size: 3vw;
-        margin: 1.8vw;
+        margin: 1.3vw;
     }
 
     .nav-4 > .line {
@@ -205,7 +205,7 @@ body {
     }
 
     .nav-elements > span {
-        margin: 1.7vw;
+        margin: 1.3vw;
         font-size: 4.9vw;
     }
 
