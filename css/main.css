@@ -93,9 +93,6 @@ body {
     color: #666666;
     cursor: pointer;
 }
-.slider > div {
-    display: none;
-}
 
 .line {
     display: inline;
@@ -119,6 +116,29 @@ body {
 
 .nav-4 .line {
     margin-left: 0px;
+}
+
+.slider {
+    margin-top: -5vw;
+}
+
+.slider > div {
+    display: none;
+}
+
+.project {
+    background-color: #E1BEE7;
+    display: -webkit-flex;
+    display: flex;
+    width: 98%;
+    margin: auto;
+    margin-bottom: 5vw;
+}
+
+.project > img {
+    height: 15vw;
+    width: 15vw;
+    margin: 1.5vw;
 }
  /* for tablets */
 @media (min-width: 575px) and (max-width: 1025px) {
