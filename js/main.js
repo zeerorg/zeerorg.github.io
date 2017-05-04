@@ -1,7 +1,7 @@
 var name = "developer";
 var current_text = $(".myname").text();
 var updateInterval;
-var slider = 1;
+var slider = 0;
 
 function presskey(ch) {
     $(".key-"+ch).css("background-color", "#000000");
@@ -33,13 +33,34 @@ function cursor() {
         $(".cursor").css("visibility", "hidden");
 }
 
+function addTransform(element, scale, origin=0.5) {
+
+    var calcOrigin = 100 - 100*origin;
+    element.css({
+        "transform-origin": calcOrigin+"%"
+    })
+
+    element.css({
+        "-webkit-transform": "scaleX(" + scale + ")",
+        "-ms-transform": "scaleX(" + scale + ")",
+        "-moz-transform": "scaleX(" + scale + ")",
+        "-o-transform": "scaleX(" + scale + ")",
+        "transform": "scaleX(" + scale + ")",
+    })
+}
+
 function setSlide(num) {
     console.log("setting block " + num)
-    $(".container-"+slider).css('display', 'none');
-    $(".nav-"+slider).children(".line").css('transform', 'scaleX(0)');
-
-    $(".nav-"+num).children(".line").css('transform', 'scaleX(1)');
-    $(".container-"+num).css('display', 'block');
+    if(num == slider){
+        return;
+    }
+    var origin = 
+    addTransform($(".container-" + slider), 0, 0)
+    addTransform($(".nav-" + slider).children(".line"), 0)
+    setTimeout(function() {
+        addTransform($(".nav-" + num).children(".line"), 1)
+        addTransform($(".container-" + num), 1, 1)
+    }, 300)
     slider = num;
 }
 
