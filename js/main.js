@@ -54,13 +54,11 @@ function setSlide(num) {
     if(num == slider){
         return;
     }
-    var origin = 
-    addTransform($(".container-" + slider), 0, 0)
+    var origin = num - slider;
+    addTransform($(".container-" + slider), 0, (origin >>> 31)^1)
     addTransform($(".nav-" + slider).children(".line"), 0)
-    setTimeout(function() {
-        addTransform($(".nav-" + num).children(".line"), 1)
-        addTransform($(".container-" + num), 1, 1)
-    }, 300)
+    addTransform($(".nav-" + num).children(".line"), 1)
+    addTransform($(".container-" + num), 1, (origin >>> 31))
     slider = num;
 }
 
