@@ -146,8 +146,8 @@ a:link, a:visited, a:hover, a:active {
     margin: 1.5vw;
 }
 
-.stretch-project-image {
-    height: 15vw;
+.project > .stretch-project-image {
+    height: 14vw;
     width: 12vw;
 }
 
@@ -202,6 +202,49 @@ a:link, a:visited, a:hover, a:active {
 /* Show the tooltip text when you mouse over the tooltip container */
 .custom-tooltip:hover .tooltiptext {
     visibility: visible;
+}
+
+.interests {
+    background-color: #e0e0e0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+}
+
+.interest-container {
+    margin: auto;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    padding: 1.5vw;
+    background-color: white;
+    border-radius: 5%;
+
+    -moz-box-shadow: 10px 10px 5px grey;
+    -webkit-box-shadow: 10px 10px 5px grey;
+    box-shadow: 5px 5px 5px 1px grey;
+
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: flex;
+
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+}
+
+.interest-container > img {
+    /*width: 12vw;*/
+    height: 12vw;
+    /*opacity: 0.9;*/
+    mix-blend-mode: darken;
+    border-radius: 5%;
+}
+
+.interest-container > p {
+    margin-top: 1vw;
+    margin-bottom: -0.3vw;
+    text-align: center;
+    font-size: 1.5vw;
 }
 
 footer {
@@ -339,8 +382,8 @@ footer {
         margin-right: 2vw;
     }
 
-    .stretch-project-image {
-        height: 22vw;
+    .project > .stretch-project-image {
+        height: 25vw;
         width: 18vw;
     }
 

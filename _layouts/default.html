@@ -7,59 +7,23 @@
     <link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"> 
-    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
-  <body style="font-family: 'Roboto', sans-serif; height: 100%;"><!--
-      <nav>
-        Home
-      </nav>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">{{ page.title | default: site.github.repository_name }}</h1>
-        <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
-
-        <ul>
-          {% if site.show_downloads %}
-            <li class="download"><a class="buttons" href="{{ site.github.zip_url }}">Download ZIP</a></li>
-            <li class="download"><a class="buttons" href="{{ site.github.tar_url }}">Download TAR</a></li>
-          {% endif %}
-          <li><a class="buttons github" href="{{ site.github.repository_url }}">View On GitHub</a></li>
-        </ul>
-
-        {% if site.github.is_project_page %}
-          <p class="header">This project is maintained by <a class="header name" href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-
-        {% if site.github.is_user_page %}
-          <ul>
-            <li><a class="buttons github" href="{{ site.github.repository_url }}">GitHub Profile</a></li>
-          </ul>
-        {% endif %}
-      </header>
-</div>
--->
+  <body style="font-family: 'Roboto', sans-serif; height: 100%;">
       <div class="topnav">
           <p class="topnav-heading">Rishabh Gupta</p>
       </div>
       <section>
         {{ content }}
       </section>
-     <!--<footer style="position: fixed; bottom: 0px; width: 100%; height: 3vw; background-color: white; margin:auto; text-align: center;">
-      github linkedin fb
-    </footer>-->
     <footer>
       <a href="https://github.com/zeerorg" target="_blank"><img class="icon" src="/assets/github-icon.png"></a>
       <a href="https://www.linkedin.com/in/rishabhgupta4325/" target="_blank"><img class="icon" src="/assets/linkedin-icon.png"></a>
       <a href="mailto:rishabh4325@gmail.com"><img class="icon" src="/assets/mail-icon.png"></a>
       <a href="tel:+919711821354"><img class="icon" src="/assets/phone-icon.png"></a>
     </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     {% if site.google_analytics %}
       <script type="text/javascript">
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
