@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
+import Introduce from './Components/Introduce';
+import SocialHandle from './Components/SocialHandle';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Rishabh Gupta</h1>
+        <Introduce />
+        <SocialHandle />
       </div>
     );
   }
