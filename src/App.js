@@ -6,8 +6,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Introduce />
-        <SocialHandle />
+        <div className="container" >
+          <div className="row" >
+            <div class="col-sm">
+              <Introduce />
+            </div>
+            <div class="col-sm">
+              <SocialHandle />
+            </div>
+          </div>
+        </div >
       </div>
     );
   }
