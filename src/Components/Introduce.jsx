@@ -3,10 +3,17 @@ import myPic from '../resources/mypic.jpg';
 
 
 const Introduce = (props) => {
+  let imageStyle = { width: "40%", marginTop: "10%" };
   return (
     <React.Fragment>
-      <h1>Rishabh Gupta</h1>
-      <img src={myPic} alt={"Me"}/>
+      <h1>Rishabh</h1>
+      <h1>Gupta</h1>
+      <img
+        src={myPic}
+        class="img-fluid img-thumbnail rounded"
+        alt={"Me"}
+        style={imageStyle}
+      />
     </React.Fragment>
   )
 }

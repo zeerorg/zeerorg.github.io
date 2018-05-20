@@ -4,14 +4,16 @@ import SocialHandle from './Components/SocialHandle';
 
 class App extends Component {
   render() {
+    let sectionStyle = { marginTop: "15%", marginBottom: "15%" }
+
     return (
       <div className="App">
         <div className="container" >
           <div className="row" >
-            <div class="col-sm">
+            <div class="col-sm" style={sectionStyle}>
               <Introduce />
             </div>
-            <div class="col-sm">
+            <div class="col-sm" style={sectionStyle}>
               <SocialHandle />
             </div>
           </div>
