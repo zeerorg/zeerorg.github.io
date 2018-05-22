@@ -2,18 +2,20 @@ import React, { Component } from 'react';
 import Introduce from './Components/Introduce';
 import SocialHandle from './Components/SocialHandle';
 
+import './App.css';
+
 class App extends Component {
   render() {
-    let sectionStyle = { marginTop: "15%", marginBottom: "15%" }
+    let sectionStyle = { paddingTop: "10vh", paddingBottom: "10vh", height: "100vh", textAlign: "center" };
 
     return (
       <div className="App">
-        <div className="container" >
-          <div className="row" >
-            <div class="col-sm" style={sectionStyle}>
+        <div className="container-fluid" >
+          <div className="row">
+            <div className="col-sm" style={sectionStyle}>
               <Introduce />
             </div>
-            <div class="col-sm" style={sectionStyle}>
+            <div className="col-sm" style={{ ...sectionStyle}}>
               <SocialHandle />
             </div>
           </div>
