@@ -1,28 +1,36 @@
-import React from 'react';
-import twitterIcon from '../resources/twitter.png';
-import githubIcon from '../resources/github.svg';
-import emailIcon from '../resources/email.svg';
+import React from "react";
 
-const SocialHandle = (props) => {
-  let iconStyle = { width: "5vh" };
+const ExternalLink = props => {
+  let linkStyle = { marginBottom: "1.5vh", color: "blue" };
+  return (
+    <a
+      href={props.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={linkStyle}
+    >
+      {props.children}
+    </a>
+  );
+};
+
+const SocialHandle = props => {
   let headingStyle = { marginBottom: "4vh" };
-  let linkStyle = { fontSize: "2.8vh", display: "block", marginBottom: "1.5vh" }
   // TODO: Add margin to links
   return (
     <div className="container-fluid">
       <h1 style={headingStyle}>Message me on</h1>
-      <a href="https://twitter.com/thisIsRGupta" target="_blank" rel="noopener noreferrer" style={linkStyle}>
-        <img src={twitterIcon} alt="Twitter" style={iconStyle}/> @thisIsRGupta
-      </a>
-      <a href="https://github.com/zeerorg" target="_blank" rel="noopener noreferrer" style={linkStyle}>
-        <img src={githubIcon} alt="Github" style={iconStyle}/> @zeerorg
-      </a>
-      <span style={linkStyle}>
-        <a href="mailto:r.g.gupta@outlook.com" target="_blank" rel="noopener noreferrer" ><img src={emailIcon} alt="Email" style={iconStyle}/></a> 
-        r.g.gupta@outlook.com
-      </span>
+      <h4>
+        <ExternalLink link="https://twitter.com/thisIsRGupta">twitter</ExternalLink> /{" "}
+        <ExternalLink link="https://github.com/zeerorg">github</ExternalLink> /{" "}
+        <ExternalLink link="https://www.linkedin.com/in/rishabhgupta4325/">linked in</ExternalLink> /{" "}
+        <ExternalLink link="https://email.com/">
+          r.g.gupta@outlook.com
+        </ExternalLink>
+      </h4>
+      <h1 style={{marginTop: "25vh"}}>Checkout my <a href="https://blog.zeerorg.site"><u>blog</u></a></h1>
     </div>
-  )
-}
+  );
+};
 
 export default SocialHandle;
